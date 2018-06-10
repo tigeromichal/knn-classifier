@@ -1,0 +1,16 @@
+.confusionLabel {
+    -fx-font-size: 14px;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 25px;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+
+.confusionValue {
+    -fx-font-size: 14px;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 25px;
+    -fx-text-alignment: center;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}

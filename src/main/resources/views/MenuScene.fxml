@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="1000.0"
+            stylesheets="@style/menuScene.css" xmlns="http://javafx.com/javafx/8.0.111"
+            fx:controller="com.ksr.knnclassifier.controller.MenuController">
+    <Label layoutX="15.0" layoutY="15.0" text="KNN Classification">
+        <font>
+            <Font size="32.0"/>
+        </font>
+    </Label>
+    <Pane layoutX="500.0" layoutY="15.0" prefHeight="485.0" prefWidth="485.0">
+        <GridPane fx:id="confusionGridPane">
+        </GridPane>
+    </Pane>
+    <Label layoutX="15.0" layoutY="140.0" text="Extractor"/>
+    <Label layoutX="15.0" layoutY="180.0" text="Metrics"/>
+    <Label layoutX="15.0" layoutY="220.0" text="k"/>
+    <Label layoutX="15.0" layoutY="260.0" text="Training data %"/>
+    <Label layoutX="15.0" layoutY="300.0" prefWidth="100.0" text="Category"/>
+    <Label layoutX="15.0" layoutY="340.0" prefWidth="100.0" text="n"/>
+    <Label layoutX="15.0" layoutY="380.0" prefWidth="100.0" text="top"/>
+    <ChoiceBox fx:id="extractorChoiceBox" layoutX="125.0" layoutY="136.0" prefWidth="190.0"/>
+    <ChoiceBox fx:id="metricsChoiceBox" layoutX="125.0" layoutY="176.0" prefWidth="190.0"/>
+    <TextField fx:id="kParameterTextField" layoutX="125.0" layoutY="216.0" prefWidth="190.0" text="3"/>
+    <TextField fx:id="trainingDataPercentageTextField" layoutX="125.0" layoutY="256.0" prefWidth="190.0" text="0.6"/>
+    <TextField fx:id="categoryNameTextField" layoutX="125.0" layoutY="296.0" prefWidth="190.0" text="place"/>
+    <TextField fx:id="nGramTextField" layoutX="125.0" layoutY="336.0" prefWidth="190.0" text="3" visible="false"/>
+    <TextField fx:id="topFrequentPercentageTextField" layoutX="125.0" layoutY="376.0" prefWidth="190.0" text="0.1"/>
+    <ChoiceBox fx:id="dataSetChoiceBox" layoutX="14.0" layoutY="500.0" prefWidth="300.0"/>
+    <Button fx:id="loadDataButton" layoutX="15.0" layoutY="550.0" mnemonicParsing="false" prefWidth="300.0"
+            text="Load data">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Button>
+    <Button fx:id="classifyButton" layoutX="15.0" layoutY="605.0" mnemonicParsing="false" prefWidth="300.0"
+            text="Classify">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Button>
+    <ProgressBar fx:id="classifyProgressBar" layoutX="14.0" layoutY="666.0" minHeight="20.0" prefWidth="970.0"
+                 progress="0.0"/>
+    <Button fx:id="saveResultsButton" layoutX="685.0" layoutY="605.0" mnemonicParsing="false" prefWidth="300.0"
+            text="Save results">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Button>
+    <Label fx:id="accuracyLabel" layoutX="500.0" layoutY="504.0"/>
+</AnchorPane>
